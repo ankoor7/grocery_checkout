@@ -2,13 +2,10 @@
 # Documentation for the file
 # The classes hold special pricing models for specific items. There are classes for different types of offer. They take an item, the number of a that item to sell and return the cost for the entire group.
 
-# Documentation for the Bogof Class
-# ---
 
-# Summary
-class Bogof
+class Offer
 
-attr_accessor :item, :quantity, :price
+  attr_accessor :item, :quantity, :price
 
   def initialize(options)
     @item = options[:item]
@@ -16,7 +13,18 @@ attr_accessor :item, :quantity, :price
     @price = options[:price]
   end
 
+end
+
+
+# Documentation for the Bogof Class
+# ---
+
+# Summary
+class Bogof < Offer
+
   def calculate(item, quantity)
+    item_sold, quantity_sold = item, quantity
+
 
   end
 end
@@ -26,15 +34,7 @@ end
 # ---
 
 # Summary
-class Bulkbuy
-
-attr_accessor :item, :quantity, :price
-
-  def initialize(options)
-    @item = options[:item]
-    @quantity = options[:quantity]
-    @price = options[:price]
-  end
+class Bulkbuy < Offer
 
   def calculate(item, quantity)
 
