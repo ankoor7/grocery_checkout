@@ -1,5 +1,6 @@
 class Offer
 
+
 # subclasses
   # Bogof
   # buy x for price partition

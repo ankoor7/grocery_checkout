@@ -10,5 +10,9 @@ describe 'Offer' do
     it "should create an offer object" do
       expect(@offer).to be_an_instance_of Offer
     end
+
   end
+
+
+
 end
