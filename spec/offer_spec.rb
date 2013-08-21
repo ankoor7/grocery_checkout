@@ -17,7 +17,6 @@ describe 'Offer' do
       answer = @item1, 3, 400
       expect([@offer.item, @offer.quantity, @offer.price]).to eql answer
     end
-
   end
 
 end
@@ -41,6 +40,16 @@ describe 'Bogof' do
     end
 
   end
+
+  describe "#calculate" do
+    it "should calculate the cost of items on offer and return a cost" do
+      expect(@offer.calculate(@item1, 6)).to eql 800
+    end
+    it "should calculate account for left over items and charge the default price " do
+      expect(@offer.calculate(@item1, 7)).to eql 1000
+    end
+  end
+
 
 
 

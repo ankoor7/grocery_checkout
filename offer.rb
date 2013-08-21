@@ -25,7 +25,8 @@ class Bogof < Offer
   def calculate(item, quantity)
     item_sold, quantity_sold = item, quantity
 
-
+    cost =0
+    return cost
   end
 end
 
