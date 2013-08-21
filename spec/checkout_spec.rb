@@ -12,5 +12,9 @@ describe 'Checkout' do
     end
   end
 
+  # describe "#scan" do
+  #   it "scan items to sell and puts them into an array" do
+  #     @checkout.scan()
+  # end
 
 end
