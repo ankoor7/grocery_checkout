@@ -1,19 +1,44 @@
 # = =offer.rb
 # Documentation for the file
+# The classes hold special pricing models for specific items. There are classes for different types of offer. They take an item, the number of a that item to sell and return the cost for the entire group.
 
-# Documentation for the Offer Class
+# Documentation for the Bogof Class
 # ---
 
 # Summary
-# The Offer class hold special pricing models for specific items. There are subclasses for different types of offer. They take an item, the number of a that item to sell and return the cost for the entire group.
-class Offer
+class Bogof
+
+attr_accessor :item, :quantity, :price
+
+  def initialize(options)
+    @item = options[:item]
+    @quantity = options[:quantity]
+    @price = options[:price]
+  end
+
+  def calculate(item, quantity)
+
+  end
+end
 
 
-  # subclasses
-  # Bogof
-  # buy x for price partition
+# Documentation for the Bulkbuy Class
+# ---
 
-  # BulkBuy
-  # buy more than x and price per unit is p
+# Summary
+class Bulkbuy
+
+attr_accessor :item, :quantity, :price
+
+  def initialize(options)
+    @item = options[:item]
+    @quantity = options[:quantity]
+    @price = options[:price]
+  end
+
+  def calculate(item, quantity)
+
+  end
+
 
 end
